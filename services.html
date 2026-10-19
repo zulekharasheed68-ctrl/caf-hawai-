@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+    <title>Services | Cafe Hawaii</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="bg-black text-gray-300">
+
+    <!-- navbar satrt -->
+
+<nav class="h-[70px] sticky top-0 z-50 relative w-full px-6 md:px-16 lg:px-24 xl:px-32 flex items-center justify-between z-30 bg-gray-900 from-indigo-700 to-violet-500 transition-all">
+        
+    <img src="logo.png" alt="">
+
+    <ul class="text-white md:flex hidden items-center gap-10">
+        <li><a class="hover:text-white/70 transition" href="index.html">Home</a></li>
+        <li><a class="hover:text-white/70 transition" href="services.html">Services</a></li>
+        <li><a class="hover:text-white/70 transition" href="menu.html">Menu</a></li>
+        <li><a class="hover:text-white/70 transition" href="reviews.html">Reviews</a></li>
+        
+    </ul>
+
+    <button id="contactBtn" class="inline-block bg-gray-300 text-white hover:bg-white hover:text-gray-900 font-semibold px-8 py-3 rounded-full transition duration-300">
+    Book A Table
+</button>
+
+    <button aria-label="menu-btn" type="button" class="menu-btn inline-block md:hidden active:scale-90 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="#fff">
+            <path d="M3 7a1 1 0 1 0 0 2h24a1 1 0 1 0 0-2zm0 7a1 1 0 1 0 0 2h24a1 1 0 1 0 0-2zm0 7a1 1 0 1 0 0 2h24a1 1 0 1 0 0-2z"/>
+        </svg>
+    </button>
+
+    <div class="mobile-menu absolute top-[70px] left-0 w-full bg-gray-900 from-indigo-700 to-violet-500 p-6 hidden md:hidden">
+        <ul class="flex flex-col space-y-4 text-white text-lg">
+            <li><a href="index.html" class="text-sm">Home</a></li>
+            <li><a href="services.html" class="text-sm">Services</a></li>
+            <li><a href="menu.html" class="text-sm">Menu</a></li>
+            <li><a href="reviews.html" class="text-sm">Reviews</a></li>
+        </ul>
+        <!-- <button type="button" id="contactBtn" class="bg-white text-gray-700 mt-6 inline md:hidden text-sm hover:opacity-90 active:scale-95 transition-all w-40 h-11 rounded-full">
+            Book A Table
+        </button> -->
+    </div>
+</nav>
+
+<script>
+    const menuButtons = document.querySelectorAll('.menu-btn');
+    const mobileMenus = document.querySelectorAll('.mobile-menu');
+
+    menuButtons.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+            mobileMenus[index].classList.toggle('hidden');
+        });
+    });
+
+</script>
+
+<!-- navbar end -->
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+
+            <div class="text-center mb-14">
+                <p class="uppercase tracking-[4px] text-gray-500 text-sm mb-3">
+                    What We Offer
+                </p>
+
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-5">
+                    Experience Cafe Hawaii
+                </h2>
+
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Explore our dining experience, delicious menu,
+                    and opportunities to connect with us.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Service 1 -->
+                <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-500 transition duration-300 group">
+                    <img src="food.jpg" alt="Food and beverages"
+                         class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="p-6">
+                        <i class="fa-solid fa-utensils text-2xl text-gray-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-3">Food & Beverages</h3>
+                        <p class="text-gray-400 leading-7 mb-5">
+                            Discover delicious menu options and refreshing beverages
+                            for a satisfying dining experience.
+                        </p>
+                       
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-500 transition duration-300 group">
+                    <img src="dine.jpg" alt="Cafe dining experience"
+                         class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="p-6">
+                        <i class="fa-solid fa-chair text-2xl text-gray-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-3">Dine-In Experience</h3>
+                        <p class="text-gray-400 leading-7 mb-5">
+                            Enjoy a welcoming environment for spending quality
+                            time with friends and family.
+                        </p>
+                       
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-500 transition duration-300 group">
+                    <img src="take away.jpg" alt="Takeaway food"
+                         class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="p-6">
+                        <i class="fa-solid fa-bag-shopping text-2xl text-gray-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-3">Takeaway Service</h3>
+                        <p class="text-gray-400 leading-7 mb-5">
+                            Enjoy your favorite food on the go with convenient
+                            takeaway options, if available.
+                        </p>
+                       
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-500 transition duration-300 group">
+                    <img src="group.jpg" alt="Friends dining together"
+                         class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="p-6">
+                        <i class="fa-solid fa-users text-2xl text-gray-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-3">Group Dining</h3>
+                        <p class="text-gray-400 leading-7 mb-5">
+                            Make your get-togethers memorable with delicious food
+                            and time spent together.
+                        </p>
+                       
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-500 transition duration-300 group">
+                    <img src="table.jpg" alt="Restaurant table setting"
+                         class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="p-6">
+                        <i class="fa-regular fa-calendar-check text-2xl text-gray-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-3">Table Reservations</h3>
+                        <p class="text-gray-400 leading-7 mb-5">
+                            Get in touch with our team to ask about table
+                            availability and reservation options.
+                        </p>
+                       
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-500 transition duration-300 group">
+                    <img src="brand.jpg" alt="Food creator filming a meal"
+                         class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="p-6">
+                        <i class="fa-solid fa-camera text-2xl text-gray-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-3">Brand Collaborations</h3>
+                        <p class="text-gray-400 leading-7 mb-5">
+                            Connect with us for potential food blogger,
+                            influencer, and brand collaborations.
+                        </p>
+                       
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action -->
+    <section class="bg-zinc-900 py-16 px-6 text-center border-y border-gray-800">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-5">
+            Ready to Experience Cafe Hawaii?
+        </h2>
+
+        <p class="text-gray-400 max-w-xl mx-auto mb-8">
+            Get in touch with us to learn more about our menu,
+            dining experience, and available services.
+        </p>
+
+         <button  class="bg-gray-400 text-black px-6 py-3 rounded-full" id="contactToo">
+    Contact Us
+</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 pt-12 pb-6 px-6">
+        <div class="max-w-7xl mx-auto">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-200 mb-4">
+                        Cafe Hawaii
+                    </h2>
+                    <p class="leading-7">
+                        Delicious food, a relaxing ambiance, and memorable
+                        moments with your loved ones.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold text-gray-200 mb-4">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <!-- <li><a href="about.html" class="hover:text-white transition">About Us</a></li> -->
+                        <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+                        <li><a href="reviews.html" class="hover:text-white transition">Reviews </a></li>
+                        <!-- <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li> -->
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold text-gray-200 mb-4">Connect With Us</h3>
+                    <p class="mb-3">Karachi, Pakistan</p>
+                    <a href="https://www.instagram.com/cafehawaii.khi/"
+                       target="_blank" rel="noopener noreferrer"
+                       class="hover:text-white transition">
+                        <i class="fa-brands fa-instagram mr-2"></i>Instagram
+                    </a>
+                    <p class="mt-4">Food, Flavor & Memories</p>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 pt-6 text-center text-sm">
+                &copy; 2026 Cafe Hawaii. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+<!-- Fixed WhatsApp Icon -->
+<a href="https://wa.me/923091358888"
+   class="whatsapp-float"
+   id="whatsappBtn"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Chat with us on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+</body>
+<script src="app.js"></script>
+</html>

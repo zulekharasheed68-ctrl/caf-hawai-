@@ -1,0 +1,414 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>cafe hawai</title>
+  </head>
+  <body>
+   <!-- navbar satrt -->
+
+<nav class="h-[70px] sticky top-0 z-50 relative w-full px-6 md:px-16 lg:px-24 xl:px-32 flex items-center justify-between z-30 bg-gray-900 from-indigo-700 to-violet-500 transition-all">
+        
+    <img src="logo.png" alt="">
+
+    <ul class="text-white md:flex hidden items-center gap-10">
+        <li><a class="hover:text-white/70 transition" href="index.html">Home</a></li>
+        <li><a class="hover:text-white/70 transition" href="services.html">Services</a></li>
+        <li><a class="hover:text-white/70 transition" href="menu.html">Menu</a></li>
+        <li><a class="hover:text-white/70 transition" href="reviews.html">Reviews</a></li>
+        
+    </ul>
+
+   <button id="contactBtn" class="inline-block bg-gray-300 text-white hover:bg-white hover:text-gray-900 font-semibold px-8 py-3 rounded-full transition duration-300">
+    Book A Table
+</button>
+
+    <button aria-label="menu-btn" type="button" class="menu-btn inline-block md:hidden active:scale-90 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="#fff">
+            <path d="M3 7a1 1 0 1 0 0 2h24a1 1 0 1 0 0-2zm0 7a1 1 0 1 0 0 2h24a1 1 0 1 0 0-2zm0 7a1 1 0 1 0 0 2h24a1 1 0 1 0 0-2z"/>
+        </svg>
+    </button>
+
+    <div class="mobile-menu absolute top-[70px] left-0 w-full bg-gray-900 from-indigo-700 to-violet-500 p-6 hidden md:hidden">
+        <ul class="flex flex-col space-y-4 text-white text-lg">
+            <li><a href="index.html" class="text-sm">Home</a></li>
+            <li><a href="services.html" class="text-sm">Services</a></li>
+            <li><a href="menu.html" class="text-sm">Menu</a></li>
+            <li><a href="reviews.html" class="text-sm">Reviews</a></li>
+        </ul>
+        <!-- <button type="button" id="contactBtn" class="bg-white text-gray-700 mt-6 inline md:hidden text-sm hover:opacity-90 active:scale-95 transition-all w-40 h-11 rounded-full">
+            Book A Table
+        </button> -->
+    </div>
+</nav>
+
+<script>
+    const menuButtons = document.querySelectorAll('.menu-btn');
+    const mobileMenus = document.querySelectorAll('.mobile-menu');
+
+    menuButtons.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+            mobileMenus[index].classList.toggle('hidden');
+        });
+    });
+
+</script>
+
+<!-- navbar end -->
+
+<!-- hero video  -->
+
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+
+        <video
+            autoplay
+            muted
+            loop
+            playsinline
+            class="absolute inset-0 w-full h-full object-cover"
+        >
+            <source src="video 1.mp4" type="video/mp4">
+        </video>
+
+        <div class="absolute inset-0 bg-black/50"></div>
+
+        <div class="relative z-10 text-center text-white px-5 py-20 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+                Discover Your Happy Place
+            </h1>
+
+            <p class="text-base sm:text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+                Escape to paradise at Cafe Hawaii, where tropical vibes, delicious flavors, and unforgettable moments come together. 🌴☕
+            </p>
+
+            <a
+                href="menu.html"
+                class="inline-block bg-gray-900 text-white hover:bg-white hover:text-gray-900 font-semibold px-8 py-3 rounded-full transition duration-300"
+            >
+                Explore Menu
+            </a>
+        </div>
+
+    </section>
+<!-- vide section end  -->
+
+<section class="bg-black text-white py-16 px-5 sm:px-10 lg:px-20">
+    <div class="max-w-6xl mx-auto text-center">
+
+        <h2 class="text-4xl sm:text-5xl font-bold mb-4">
+            About Cafe Hawaii
+        </h2>
+
+        <h3 class="text-2xl sm:text-3xl font-bold mb-8">
+            A Taste of Paradise in Every Bite
+        </h3>
+
+        <p class="text-base sm:text-lg leading-8 text-gray-300 max-w-4xl mx-auto mb-6">
+            Welcome to Cafe Hawaii, where delicious flavors meet a relaxing
+            atmosphere. We bring people together over mouthwatering food,
+            refreshing drinks, and memorable dining experiences. From juicy
+            burgers and cheesy pizzas to flavorful steaks and creamy pasta,
+            every visit is an opportunity to enjoy great food and good company.
+        </p>
+
+        <p class="text-base sm:text-lg leading-8 text-gray-300 max-w-4xl mx-auto mb-8">
+            Whether you're catching up with friends, spending quality time
+            with family, or celebrating a special occasion, Cafe Hawaii is
+            the perfect place to relax, connect, and create beautiful memories.
+        </p>
+
+        <h4 class="text-xl sm:text-2xl font-bold text-white">
+            Cafe Hawaii — Good Food, Great Vibes, Unforgettable Moments.
+        </h4>
+
+    </div>
+</section>
+ 
+<!-- services  -->
+
+<section class="bg-black text-white py-16 px-5 sm:px-10 lg:px-20">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+
+        <div class="w-full md:w-1/2">
+            <img
+                src="service.jpg"
+                alt="Delicious food served at Cafe Hawaii"
+                class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-2xl shadow-lg"
+            >
+        </div>
+
+        <div class="w-full md:w-1/2 text-center md:text-left">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-5">
+                Our Services
+            </h2>
+
+            <p class="text-gray-300 text-base sm:text-lg leading-8 mb-7">
+                At Cafe Hawaii, we bring you delicious food, refreshing
+                drinks, and a welcoming atmosphere. Whether you're dining
+                with family, meeting friends, or celebrating special
+                moments, we're here to make every visit memorable.
+            </p>
+
+           <a
+                href="services.html"
+                class="inline-block bg-gray-900 text-white hover:bg-white hover:text-gray-900 font-semibold px-8 py-3 rounded-full transition duration-300"
+            >
+                Explore our Services
+            </a>
+        </div>
+
+    </div>
+</section>
+<!-- service end  -->
+
+<!-- location section start -->
+
+<section id="location" class="bg-black text-white py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+
+        <div class="text-center mb-12">
+            <p class="text-gray-300 uppercase tracking-[5px] text-sm mb-3">
+                Find Us
+            </p>
+
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                Visit <span class="text-gray-300">Cafe Hawaii</span>
+            </h2>
+
+            <p class="text-gray-400 max-w-2xl mx-auto leading-7">
+                Come and enjoy delicious food, refreshing drinks, and a
+                relaxing atmosphere at Cafe Hawaii.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+            <div class="relative">
+                <img
+                    src="cafe.webp"
+                    alt="Cafe Hawaii restaurant"
+                    class="w-full h-[350px] md:h-[480px] object-cover rounded-2xl shadow-xl"
+                />
+
+                <div class="absolute bottom-5 left-5 right-5 bg-black/75 backdrop-blur-sm p-5 rounded-xl">
+                    <p class="text-gray-300 text-sm uppercase tracking-widest">
+                        Good Food • Good Vibes
+                    </p>
+                    <h3 class="text-2xl font-bold mt-2">
+                        A Place to Enjoy
+                    </h3>
+                </div>
+            </div>
+
+            <div class="space-y-8">
+
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-300 mb-3">
+                        Our Location
+                    </h3>
+                    <p class="text-gray-300 leading-7">
+                        Visit Cafe Hawaii in Karachi and enjoy a welcoming
+                        atmosphere with delicious food and refreshing drinks.
+                    </p>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="bg-gray-700/40 p-3 rounded-xl">
+                        <svg class="w-7 h-7 text-gray-300"
+                             fill="none" stroke="currentColor"
+                             viewBox="0 0 24 24">
+                            <path stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="1.8"
+                                  d="M12 21s8-5.5 8-12a8 8 0 10-16 0c0 6.5 8 12 8 12z"/>
+                            <circle cx="12" cy="9" r="2.5"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-bold mb-2">Find Our Cafe</h3>
+                        <p class="text-gray-400 leading-7">
+                            Gulshan-e-Iqbal, Karachi, Pakistan.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="bg-gray-700/40 p-3 rounded-xl">
+                        <svg class="w-7 h-7 text-gray-300"
+                             fill="none" stroke="currentColor"
+                             viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="9"/>
+                            <path stroke-linecap="round"
+                                  stroke-width="1.8"
+                                  d="M12 7v5l3 2"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-bold mb-2">Opening Hours</h3>
+                        <p class="text-gray-400">
+                            Daily: 12:00 PM – 12:00 AM
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="bg-gray-700/40 p-3 rounded-xl">
+                        <svg class="w-7 h-7 text-gray-300"
+                             fill="none" stroke="currentColor"
+                             viewBox="0 0 24 24">
+                            <path stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="1.8"
+                                  d="M3 5a2 2 0 012-2h3l2 5-2 1a11 11 0 005 5l1-2 5 2v3a2 2 0 01-2 2A16 16 0 013 5z"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-bold mb-2">Contact Us</h3>
+                        <p class="text-gray-400">
+                            +92 309 1358888
+                        </p>
+                    </div>
+                </div>
+
+                <a
+                    href="https://www.google.com/maps/search/?api=1&query=Cafe+Hawaii+Karachi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-3 bg-gray-300
+                    text-black px-7 py-3 rounded-full font-bold
+                    hover:bg-gray-400 transition duration-300">
+                    Get Directions →
+                </a>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- location section end  --> 
+
+<!-- ambiance start -->
+
+
+<section class="bg-black text-white py-16 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+
+        <p class="text-gray-300 uppercase tracking-widest mb-3">
+            Our Atmosphere
+        </p>
+
+        <h2 class="text-4xl font-bold mb-4">
+            The Ambiance of Cafe Hawaii
+        </h2>
+
+        <p class="text-gray-300 max-w-2xl mx-auto mb-10">
+            Discover a relaxing atmosphere, beautiful interiors,
+            delicious food, and memorable moments at Cafe Hawaii.
+        </p>
+
+        <div class="rounded-2xl overflow-hidden shadow-2xl border border-gray-800">
+            <video
+                class="w-full h-[300px] md:h-[500px] object-cover"
+                controls
+                autoplay
+                muted
+                loop
+                playsinline
+                poster="your-video-thumbnail.jpg">
+
+                <source src="ambiance.mp4" type="video/mp4">
+
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+    </div>
+</section>
+<!-- ambiance end -->
+
+<!-- footer -->
+
+<footer class="bg-black text-white pt-12 pb-6 px-6 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+
+            <div>
+                <h2 class="text-3xl font-bold text-gray-300 mb-4">
+                    Cafe Hawaii
+                </h2>
+                <p class="text-gray-400 leading-7">
+                    Enjoy delicious food, a beautiful ambiance,
+                    and memorable moments with your loved ones.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-3 text-gray-400">
+                    <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+                    <li><a href="about.html" class="hover:text-gray-300">Services</a></li>
+                    <li><a href="services.html" class="hover:text-gray-300">Menu</a></li>
+                    <li><a href="contact.html" class="hover:text-gray-300">Reviews</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                <p class="text-gray-400 mb-3">
+                    <i class="fa-solid fa-location-dot text-gray-300 mr-2"></i>
+                    Karachi, Pakistan
+                </p>
+                <p class="text-gray-400 mb-3">
+                    <i class="fa-brands fa-instagram text-gray-300 mr-2"></i>
+                    <a href="https://www.instagram.com/cafehawaii.khi/"
+                       target="_blank"
+                       class="hover:text-gray-300">
+                        Instagram
+                    </a>
+                </p>
+                <p class="text-gray-400">
+                    <i class="fa-solid fa-utensils text-gray-300 mr-2"></i>
+                    Food, Flavor & Memories
+                </p>
+            </div>
+
+        </div>
+
+        <div class="border-t border-gray-800 pt-6 text-center">
+            <p class="text-gray-500 text-sm">
+                &copy; 2026 Cafe Hawaii. All Rights Reserved.
+            </p>
+        </div>
+
+    </div>
+  
+</footer>
+
+
+
+
+<!-- Fixed WhatsApp Icon -->
+<a href="https://wa.me/923091358888"
+   class="whatsapp-float"
+   id="whatsappBtn"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Chat with us on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+  </body>
+  <script src="app.js"></script>
+</html>

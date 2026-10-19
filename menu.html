@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+    <title>Menu | Cafe Hawaii</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="bg-black text-gray-300">
+
+    <!-- navbar satrt -->
+
+<nav class="h-[70px] sticky top-0 z-50 relative w-full px-6 md:px-16 lg:px-24 xl:px-32 flex items-center justify-between z-30 bg-gray-900 from-indigo-700 to-violet-500 transition-all">
+        
+    <img src="logo.png" alt="">
+
+    <ul class="text-white md:flex hidden items-center gap-10">
+        <li><a class="hover:text-white/70 transition" href="index.html">Home</a></li>
+        <li><a class="hover:text-white/70 transition" href="services.html">Services</a></li>
+        <li><a class="hover:text-white/70 transition" href="menu.html">Menu</a></li>
+        <li><a class="hover:text-white/70 transition" href="reviews.html">Reviews</a></li>
+        
+    </ul>
+
+   <button id="contactBtn" class="inline-block bg-gray-300 text-white hover:bg-white hover:text-gray-900 font-semibold px-8 py-3 rounded-full transition duration-300">
+    Book A Table
+</button>
+
+    <button aria-label="menu-btn" type="button" class="menu-btn inline-block md:hidden active:scale-90 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="#fff">
+            <path d="M3 7a1 1 0 1 0 0 2h24a1 1 0 1 0 0-2zm0 7a1 1 0 1 0 0 2h24a1 1 0 1 0 0-2zm0 7a1 1 0 1 0 0 2h24a1 1 0 1 0 0-2z"/>
+        </svg>
+    </button>
+
+    <div class="mobile-menu absolute top-[70px] left-0 w-full bg-gray-900 from-indigo-700 to-violet-500 p-6 hidden md:hidden">
+        <ul class="flex flex-col space-y-4 text-white text-lg">
+            <li><a href="index.html" class="text-sm">Home</a></li>
+            <li><a href="services.html" class="text-sm">Services</a></li>
+            <li><a href="menu.html" class="text-sm">Menu</a></li>
+            <li><a href="reviews.html" class="text-sm">Reviews</a></li>
+        </ul>
+        <!-- <button type="button" id="contactBtn" class="bg-white text-gray-700 mt-6 inline md:hidden text-sm hover:opacity-90 active:scale-95 transition-all w-40 h-11 rounded-full">
+            Book A Table
+        </button> -->
+    </div>
+</nav>
+
+<script>
+    const menuButtons = document.querySelectorAll('.menu-btn');
+    const mobileMenus = document.querySelectorAll('.mobile-menu');
+
+    menuButtons.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+            mobileMenus[index].classList.toggle('hidden');
+        });
+    });
+
+</script>
+
+<!-- navbar end -->
+
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[380px] flex items-center justify-center text-center px-6"
+        style="background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.85)), url('images/menu-hero.jpg') center/cover;">
+
+        <div>
+            <p class="uppercase tracking-[5px] text-gray-400 mb-4">
+                Fresh • Flavorful • Delicious
+            </p>
+
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-5">
+                Our Menu
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-gray-300 text-lg">
+                Discover delicious flavors and explore our food and beverage selection.
+            </p>
+        </div>
+    </section>
+
+    <!-- Menu Intro -->
+    <section class="py-14 px-6 text-center">
+        <p class="text-gray-500 uppercase tracking-[4px] text-sm mb-3">
+            Made for Every Craving
+        </p>
+
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-5">
+            Explore Our Favorites
+        </h2>
+
+        <p class="text-gray-400 max-w-2xl mx-auto">
+            From satisfying meals to refreshing drinks, find something
+            delicious to enjoy at Cafe Hawaii.
+        </p>
+    </section>
+
+    <!-- Food Menu -->
+    <section class="px-6 pb-20">
+        <div class="max-w-7xl mx-auto">
+
+            <!-- Main Courses -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-white text-center mb-8">
+                    <i class="fa-solid fa-utensils text-gray-500 mr-2"></i>
+                    Main Courses
+                </h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-500 transition">
+                        <img src="burger.jpg" alt="Burger"
+                             class="w-full h-56 object-cover">
+                        <div class="p-5">
+                            <div class="flex justify-between gap-3 mb-3">
+                                <h3 class="text-xl font-bold text-white">Classic Burger</h3>
+                                <span class="text-gray-200 font-semibold">PKR —</span>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-6">
+                                A delicious burger served with your favorite sides.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-500 transition">
+                        <img src="pasta.jpg" alt="Pasta"
+                             class="w-full h-56 object-cover">
+                        <div class="p-5">
+                            <div class="flex justify-between gap-3 mb-3">
+                                <h3 class="text-xl font-bold text-white">Creamy Pasta</h3>
+                                <span class="text-gray-200 font-semibold">PKR —</span>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-6">
+                                A rich and creamy pasta dish full of flavor.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-500 transition">
+                        <img src="pizza.jpg" alt="Pizza"
+                             class="w-full h-56 object-cover">
+                        <div class="p-5">
+                            <div class="flex justify-between gap-3 mb-3">
+                                <h3 class="text-xl font-bold text-white">Special Pizza</h3>
+                                <span class="text-gray-200 font-semibold">PKR —</span>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-6">
+                                A tasty pizza topped with delicious ingredients.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Snacks -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-white text-center mb-8">
+                    <i class="fa-solid fa-bowl-food text-gray-500 mr-2"></i>
+                    Snacks & Starters
+                </h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-500 transition">
+                        <img src="fries.jpg" alt="French fries"
+                             class="w-full h-56 object-cover">
+                        <div class="p-5">
+                            <div class="flex justify-between gap-3 mb-3">
+                                <h3 class="text-xl font-bold text-white">French Fries</h3>
+                                <span class="text-gray-200 font-semibold">PKR —</span>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-6">
+                                Crispy golden fries for a satisfying snack.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-500 transition">
+                        <img src="wings.jpg" alt="Chicken wings"
+                             class="w-full h-56 object-cover">
+                        <div class="p-5">
+                            <div class="flex justify-between gap-3 mb-3">
+                                <h3 class="text-xl font-bold text-white">Chicken Wings</h3>
+                                <span class="text-gray-200 font-semibold">PKR —</span>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-6">
+                                Flavorful chicken wings perfect for sharing.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-500 transition">
+                        <img src="club.jpg" alt="Sandwich"
+                             class="w-full h-56 object-cover">
+                        <div class="p-5">
+                            <div class="flex justify-between gap-3 mb-3">
+                                <h3 class="text-xl font-bold text-white">Club Sandwich</h3>
+                                <span class="text-gray-200 font-semibold">PKR —</span>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-6">
+                                A satisfying sandwich with fresh fillings.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Beverages -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-white text-center mb-8">
+                    <i class="fa-solid fa-mug-hot text-gray-500 mr-2"></i>
+                    Beverages
+                </h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-500 transition">
+                        <img src="coffee.jpg" alt="Coffee"
+                             class="w-full h-56 object-cover">
+                        <div class="p-5">
+                            <div class="flex justify-between gap-3 mb-3">
+                                <h3 class="text-xl font-bold text-white">Hot Coffee</h3>
+                                <span class="text-gray-200 font-semibold">PKR —</span>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-6">
+                                A comforting cup of freshly prepared coffee.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-500 transition">
+                        <img src="mock.jpg" alt="Mocktail"
+                             class="w-full h-56 object-cover">
+                        <div class="p-5">
+                            <div class="flex justify-between gap-3 mb-3">
+                                <h3 class="text-xl font-bold text-white">Refreshing Mocktail</h3>
+                                <span class="text-gray-200 font-semibold">PKR —</span>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-6">
+                                A refreshing drink for a relaxing break.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-500 transition">
+                        <img src="milk.jpg" alt="Milkshake"
+                             class="w-full h-56 object-cover">
+                        <div class="p-5">
+                            <div class="flex justify-between gap-3 mb-3">
+                                <h3 class="text-xl font-bold text-white">Chocolate Milkshake</h3>
+                                <span class="text-gray-200 font-semibold">PKR —</span>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-6">
+                                A creamy chocolate shake for sweet cravings.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div>
+                <h2 class="text-3xl font-bold text-white text-center mb-8">
+                    <i class="fa-solid fa-cake-candles text-gray-500 mr-2"></i>
+                    Desserts
+                </h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-500 transition">
+                        <img src="brown.jpg" alt="Chocolate brownie"
+                             class="w-full h-56 object-cover">
+                        <div class="p-5">
+                            <div class="flex justify-between gap-3 mb-3">
+                                <h3 class="text-xl font-bold text-white">Chocolate Brownie</h3>
+                                <span class="text-gray-200 font-semibold">PKR —</span>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-6">
+                                A rich chocolate treat for dessert lovers.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-500 transition">
+                        <img src="cheese.jpg" alt="Cheesecake"
+                             class="w-full h-56 object-cover">
+                        <div class="p-5">
+                            <div class="flex justify-between gap-3 mb-3">
+                                <h3 class="text-xl font-bold text-white">Cheesecake</h3>
+                                <span class="text-gray-200 font-semibold">PKR —</span>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-6">
+                                A smooth and creamy dessert to finish your meal.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-500 transition">
+                        <img src="ice.jpg" alt="Ice cream"
+                             class="w-full h-56 object-cover">
+                        <div class="p-5">
+                            <div class="flex justify-between gap-3 mb-3">
+                                <h3 class="text-xl font-bold text-white">Ice Cream</h3>
+                                <span class="text-gray-200 font-semibold">PKR —</span>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-6">
+                                A cool and creamy treat in delicious flavors.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="bg-zinc-900 border-y border-gray-800 py-16 px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-5">
+            Something Delicious Awaits
+        </h2>
+
+        <p class="text-gray-400 max-w-xl mx-auto mb-8">
+            Contact Cafe Hawaii for menu details and information
+            about available dishes and prices.
+        </p>
+
+       <button  id="contactToo" class="bg-gray-400 text-black px-6 py-3 rounded-full">
+    Contact Us
+</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 pt-12 pb-6 px-6">
+        <div class="max-w-7xl mx-auto">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-200 mb-4">Cafe Hawaii</h2>
+                    <p class="leading-7">
+                        Delicious food, a relaxing ambiance, and memorable
+                        moments with your loved ones.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold text-gray-200 mb-4">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <!-- <li><a href="about.html" class="hover:text-white transition">About Us</a></li> -->
+                        <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+                        <li><a href="menu.html" class="hover:text-white transition">Menu</a></li>
+                        <li><a href="reviews.html" class="hover:text-white transition">Reviews </a></li>
+                        <!-- <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li> -->
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold text-gray-200 mb-4">Connect With Us</h3>
+                    <p class="mb-3">Karachi, Pakistan</p>
+                    <a href="https://www.instagram.com/cafehawaii.khi/"
+                       target="_blank" rel="noopener noreferrer"
+                       class="hover:text-white transition">
+                        <i class="fa-brands fa-instagram mr-2"></i>Instagram
+                    </a>
+                    <p class="mt-4">Food, Flavor & Memories</p>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 pt-6 text-center text-sm">
+                &copy; 2026 Cafe Hawaii. All Rights Reserved.
+            </div>
+
+        </div>
+    </footer>
+
+<!-- Fixed WhatsApp Icon -->
+<a href="https://wa.me/923091358888"
+   class="whatsapp-float"
+   id="whatsappBtn"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Chat with us on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+</body>
+<script src="app.js"></script>
+</html>
